@@ -21,6 +21,7 @@ function newConnection(socket) {
 
   function mouseMsg(data) {
     socket.broadcast.emit('mouse', data)
+    // io.socket.emit('mouse', data) THIS WILL SEND TO EVERYONE 
     console.log(socket.id)
     console.log(data);
   }
